@@ -8,6 +8,7 @@ import com.kodego.inventorymanagement.app.juntilla.databinding.RowItemBinding
 class ProductAdapter(val products:List<Products>):RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     var onItemClick : ((Products) -> Unit)? = null
+    var onUpdateButtonClick : ((Products, Int) -> Unit)? = null
 
     inner class ProductViewHolder(val binding:RowItemBinding):RecyclerView.ViewHolder(binding.root)
 
@@ -22,6 +23,10 @@ class ProductAdapter(val products:List<Products>):RecyclerView.Adapter<ProductAd
             imgProduct.setImageResource(products[position].imageName)
             tvItemName.text = products[position].itemName
             tvDescription.text = products[position].itemDescription
+            tvQuantity.text = products[position].quantity.toString()
+            imgBtnUpdate.setOnClickListener(){
+                onUpdateButtonClick?.invoke(products[position],position)
+            }
         }
         holder.itemView.setOnClickListener(){
             onItemClick?.invoke(products[position])
