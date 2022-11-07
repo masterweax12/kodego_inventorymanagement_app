@@ -72,7 +72,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvQuantity"
                 app:layout_constraintTop_toBottomOf="@+id/tvDescription"
-                app:srcCompat="@android:drawable/ic_menu_edit" />
+                app:srcCompat="@android:drawable/ic_menu_edit"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
                 android:id="@+id/imgBtnDelete"
@@ -80,7 +81,8 @@
                 android:layout_height="48dp"
                 app:layout_constraintStart_toEndOf="@+id/imgBtnUpdate"
                 app:layout_constraintTop_toTopOf="@+id/imgBtnUpdate"
-                app:srcCompat="@android:drawable/ic_menu_delete" />
+                app:srcCompat="@android:drawable/ic_menu_delete"
+                tools:ignore="SpeakableTextPresentCheck" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

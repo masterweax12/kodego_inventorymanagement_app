@@ -42,6 +42,7 @@
         app:backgroundTint="@color/material_dynamic_neutral60"
         app:layout_constraintBottom_toBottomOf="@+id/myRecycler"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:srcCompat="@android:drawable/ic_menu_add"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -41,8 +41,7 @@ class HomeActivity : AppCompatActivity() {
             intent.putExtra("itemName",it.itemName)
             intent.putExtra("itemDescription",it.itemDescription)
             intent.putExtra("itemImage",it.imageName)
-            intent.putExtra("quantity",it.quantity
-            )
+            intent.putExtra("quantity",it.quantity)
             startActivity(intent)
         }
 
@@ -60,7 +59,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         binding.myRecycler.adapter = adapter
-        binding.myRecycler.layoutManager = GridLayoutManager(this, 2)
+        binding.myRecycler.layoutManager = LinearLayoutManager(this)
 
 
 
